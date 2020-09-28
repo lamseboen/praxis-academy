@@ -1,0 +1,24 @@
+1. Open
+	- open /Applications/Firefox.app
+	- open /Applications/Mounty.app
+
+2. pbcopy dan pbpaste
+	- ls ~ | pbcopy 
+		hasil -> 	Applications
+					Desktop
+					Documents
+					Downloads
+					Library
+					Movies
+					Music
+					Pictures
+					Postman
+					Public
+					Titip Suhu(punya mas wisnu)
+					coba_coba
+					composer.phar
+					devops
+					project
+					rnd
+
+	-

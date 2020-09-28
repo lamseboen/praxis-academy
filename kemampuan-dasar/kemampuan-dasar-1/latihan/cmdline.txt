@@ -1,0 +1,111 @@
+-----------------------------------------------------
+# dari https://www.mitchchn.me/2014/os-x-terminal/
+-----------------------------------------------------
+1. Open
+	- open /Applications/Firefox.app
+	- open /Applications/Mounty.app
+
+2. pbcopy dan pbpaste
+	- ls ~ | pbcopy 
+		hasil -> 	Applications
+					Desktop
+					Documents
+					Downloads
+					Library
+					Movies
+					Music
+					Pictures
+					Postman
+					Public
+					Titip Suhu(punya mas wisnu)
+					coba_coba
+					composer.phar
+					devops
+					project
+					rnd
+
+	- pbcopy <cmdline.txt ; pbpaste >> hasilpastecmdline.txt
+		hasil -> ada di file latihan/hasilpastecmdline.txt
+
+3. mdfind
+	- mdfind -onlyin ./ latihan
+		hasil -> path directory /Users/bankjateng/coba_coba/praxis-academy/kemampuan-dasar-1/latihan
+
+4. screencapture
+	- screencapture image.png
+		hasil -> latihan/image.png
+
+5. launchctl
+	- sudo launchctl load -w
+		hasil -> gagal, muncul hasil usage
+
+6. say
+	- say " i want to join praxis academy "
+		hasil -> voice over pria mengucapkan "i want to join praxis academy"
+
+7. diskutil
+	- diskutil list
+		hasil ->  /dev/disk0 (internal, physical): dan lain2
+
+8. brew
+	-brew install code
+	- brew update
+	- brew upgrade
+	- brew doctor
+
+
+
+-----------------------------------------------------
+#dari https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/
+-----------------------------------------------------
+
+1. change directory
+	- cd praxis-academy/kemampuan-dasar-1/latihan/
+
+2. listing directory
+	- ls -l
+
+3. open
+
+4. copy
+	- cp cmdline.txt ../
+
+5. move
+	- mv cmdline.txt ../
+
+6. rename
+	- mv cmdline.txt cmrename.txt
+
+7. create directory
+	- mkdir coba
+
+8. remove empty directory
+	- rmdir coba
+
+9. remove nested directory
+	- rm -rf coba
+
+10. execute commands with superuser
+	- sudo shutdown -s +100
+
+11. List actively running computer processes
+	- top
+
+12. quit
+
+13. clear terminal screen
+	- clear
+
+14. get help
+	- help
+
+15. get one-line description for command
+	- whatis grep
+
+16. show manual page for a command
+	- man grep
+
+
+
+	
+
