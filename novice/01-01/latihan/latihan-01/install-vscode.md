@@ -4,7 +4,7 @@
 1. buka terminal
 
 2. install vscode melalui brew
-    >$brew cask install visual-studio-code
+    > brew cask install visual-studio-code
     
     ![ss brew](./img/img1.png)
 
