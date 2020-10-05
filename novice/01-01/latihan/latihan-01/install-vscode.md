@@ -5,6 +5,7 @@
 
 2. install vscode melalui brew
     >$brew cask install visual-studio-code
+    
     ![ss brew](./img/img1.png)
 
 3. install extension vetur untuk tools vuejs
