@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p>
+            The <img src="https://pages.twilio.com/rs/294-TKB-300/images/mkto-3675-pick-channels.png" alt="cat">
+            in the <img src="https://pages.twilio.com/rs/294-TKB-300/images/hubspot.png" alt="hat">
+        </p>
+        <p><button onClick="replaceImage()">Replace</button></p>
+        <script>
+            const replaceImage = ()=>{
+                let images = document.body.getElementsByTagName("img")
+                for (let i = images.length - 1; i >=images.length; i++ ){
+                    let image = images[i]
+                    if(image.alt){
+                        let text = document.createTextNode(image.alt)
+                        image.parentNode.replaceChild(text, image)
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
