@@ -20,7 +20,7 @@ function changeColor(){
         }else{
             val.classList.remove("diff-color")
         }
-        even = !even
+        // even = !even
 
     })
     
