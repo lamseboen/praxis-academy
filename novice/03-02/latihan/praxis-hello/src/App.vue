@@ -15,9 +15,9 @@
     <button @click="angka+=1">tambah angka</button>
     <button @click="angka-=1">kurang angka</button>
     <p>mobil
-    <ul v-for="(mobil, index) in mobils" :key="index">
-      <li>{{mobil}}</li>
-    </ul>
+    <ol >
+      <li v-for="(mobil, index) in mobils" :key="index">  {{index}} {{mobil}}</li>
+    </ol>
     </p>
     
     <p>motor {{motor.merk}}, jumlah {{motor.jumlah}}</p>
@@ -45,7 +45,7 @@ export default {
         ],
       isgantiGambar: true,
       nama: "Lambok",
-      mobils: ['honda', 'toyota', 'mazda'],
+      mobils: ['honda', 'toyota', 'mazda', 'honda'],
       motor: {
         merk: "beat",
         jumlah: 1
@@ -67,7 +67,6 @@ export default {
     },
     gantiGambar(){
       let findUrl = this.urlGambarResource.findIndex(el => el === this.urlGambar)
-      console.log(findUrl)
       if(findUrl === -1){
         this.urlGambar = this.urlGambarResource[0]
       }
@@ -79,10 +78,7 @@ export default {
     },
   },
   created(){
-    console.log(this.urlGambarResource.length-1)
-    let numberRandom = Math.floor(Math.random() * (this.urlGambarResource.length-1)) + 0
-    console.log(numberRandom)
-    this.urlGambar = this.urlGambarResource[numberRandom]
+    this.urlGambar = this.urlGambarResource[0]
     setInterval(this.gantiGambar, 700)
   }
 }
