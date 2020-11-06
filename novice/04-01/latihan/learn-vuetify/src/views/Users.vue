@@ -3,12 +3,12 @@
     <v-row>
       <v-col cols="5">
         <v-list>
-          <v-list-item v-for="user in users" :key="user.id">
+          <v-list-item v-for="task in tasks" :key="task.id">
               <v-list-item-icon>
                   <v-icon>mdi-checkbox-blank-circle</v-icon>
               </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title >{{user.name}}</v-list-item-title>
+              <v-list-item-title>{{task.title}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -21,15 +21,15 @@
 import axios from "axios";
 export default {
   data: () => ({
-    users: [],
+    tasks: [],
   }),
   methods: {
     getDataUser: async function () {
       const getData = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        "http://192.168.1.26:3000/tasks"
       );
       const { data } = await getData;
-      this.users = data;
+      this.tasks = data;
       console.log(this.users);
     },
   },
