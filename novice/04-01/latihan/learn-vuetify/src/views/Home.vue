@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <h1>this is home page</h1>
-    <p class="red white--text=> ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, corporis. Excepturi earum aspernatur tempore atque necessitatibus consequatur nulla perferendis ea consequuntur pariatur. Ratione, delectus pariatur. Exercitationem explicabo placeat atque deserunt.</p>
+    <h1>{{num}}</h1>
+    <v-btn color="info" fab @click="tambahNumber"><v-icon>mdi-plus</v-icon></v-btn>
   </div>
 </template>
 
@@ -9,6 +10,19 @@
 
 export default {
   name: 'Home',
+  data:()=>({
+    number: 0
+  }),
+  computed: {
+    num: function(){
+      return this.$store.state.num
+    }
+  },
+  methods:{
+    tambahNumber:function(){
+      this.$store.dispatch('aNum')
+    }
+  }
 
 }
 </script>
