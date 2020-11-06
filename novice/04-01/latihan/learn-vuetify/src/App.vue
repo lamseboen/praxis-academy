@@ -50,6 +50,16 @@
             <v-list-item-title class="green--text">Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        
+        <v-list-item to="/users">
+          <v-list-item-icon>
+            <v-icon class="yellow--text">mdi-basket</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title class="yellow--text">Users</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
 
         <v-list-item to="/about">
           <v-list-item-icon>
@@ -79,30 +89,14 @@
       <v-container fluid>
         <!-- If using vue-router -->
         <router-view></router-view>
-        <v-row>
-          <v-col cols="9" xs="12">
-            <v-card class="pa-2"> one of three columns </v-card>
-          </v-col>
-          <v-col cols="3">
-            <v-card class="pa-2"> one of three columns </v-card>
-          </v-col>
-        </v-row>
-        <v-row :align="align" no-gutters style="height: 150px">
-          <v-col v-for="n in 3" :key="n">
-            <v-card class="pa-2" outlined tile> One of three columns </v-card>
-          </v-col>
-        </v-row>
+        
       </v-container>
     </v-main>
 
-    <v-footer  padless="true" fixed>
+    <v-footer  :padless="padless" fixed>
       <v-card flat tile width="100%" class="red lighten-1 text-center">
         <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
+          
         </v-card-text>
 
         <v-divider></v-divider>
@@ -127,6 +121,7 @@ export default {
     ],
     right: null,
     drawer: false,
+    padless: true,
   }),
 };
 </script>
